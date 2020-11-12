@@ -11,10 +11,10 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
                 "json:target/cucumber.json"
         },
-        features = "src\\test\\resources\\features\\activity_stream",
-        glue = "com\\nextbasecrm\\step_definitions",
+        features = "src/test/resources/features",
+        glue = "com/nextbasecrm/step_definitions",
         dryRun = false,
-        tags = "",
+        tags = "@parametrized_login",
         publish = true
 )
 public class CucumberRunner {
