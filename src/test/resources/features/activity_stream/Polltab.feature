@@ -5,7 +5,6 @@ Feature: As a user I want to be able to create an poll under poll module
     When user logs in as "help desk"
 
   @poll
-
   Scenario Outline: As a user I want to be able to create a simple poll
     Given user is on poll module
     When user enter message into message box "<Message>"
@@ -14,5 +13,5 @@ Feature: As a user I want to be able to create an poll under poll module
     And user clicks on send  button in Poll tab
     Then user should see saved poll
     Examples:
-      | Message     | Question           | Answer1 | Answer2 |
-      | Hello World | How are you today? | Great   | Not bad |
+      | Message        | Question               | Answer1 | Answer2  |
+      | Hello Group 17 | How was Vasyl's class? | Good    | Not Good |
