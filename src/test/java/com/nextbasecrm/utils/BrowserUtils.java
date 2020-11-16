@@ -33,4 +33,5 @@ public class BrowserUtils {
         BrowserUtils.wait(1);
         System.out.println("Entering text: " + text);
     }
+
 }
