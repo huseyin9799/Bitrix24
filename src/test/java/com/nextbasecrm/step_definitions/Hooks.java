@@ -4,6 +4,7 @@ import com.nextbasecrm.utils.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.TakesScreenshot;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +22,7 @@ public class Hooks {
     public void tearDown(){
         Driver.closeDriver();
         System.out.println(":::(^_^) End of test execution (*_*):::");
+
     }
 
 }
