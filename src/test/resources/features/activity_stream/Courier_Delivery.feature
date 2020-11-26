@@ -15,3 +15,4 @@ Feature: As help desk, user should be able to submit courier delivery form
       |Comment         |Important package |
     And clicks "submit order" button
     Then user should see the order created at the top of My Orders page
+      |Collection Date |03/03/2021        |

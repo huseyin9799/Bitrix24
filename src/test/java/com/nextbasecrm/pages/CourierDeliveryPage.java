@@ -94,7 +94,7 @@ public class CourierDeliveryPage extends BasePage{
         return pageTitle.getText().trim();
     }
 
-    public boolean confirmRequest(){
+    public boolean confirmRequest(Map<String,String> table){
         boolean orderStatusCondition = mostRecentOrderStatus.getText().trim().equals("New");
 
         DateTimeFormatter format = DateTimeFormatter.ofPattern("MM/dd/yyyy");
@@ -102,7 +102,9 @@ public class CourierDeliveryPage extends BasePage{
         LocalDate dateDisplayed = LocalDate.parse(mostRecentOrderPlacementDate.getText().trim(),format);
         boolean orderPlacementDateCondition = dateDisplayed.isEqual(currentDate);
 
-        return orderStatusCondition && orderPlacementDateCondition;
+        boolean orderCollectionDateCondition =mostRecentOrderRequestNumber_CollectionDate.getText().contains(table.get("Collection Date"));
+
+        return orderStatusCondition && orderPlacementDateCondition && orderCollectionDateCondition;
     }
 
 }

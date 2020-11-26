@@ -28,8 +28,8 @@ public class CourierDeliveryStepDefinitions {
     }
 
     @Then("user should see the order created at the top of My Orders page")
-    public void user_should_see_the_order_created_at_the_top_of_my_orders_page() {
+    public void user_should_see_the_order_created_at_the_top_of_my_orders_page(Map<String,String> dataTable) {
         Assert.assertTrue("Did not get re-routed to My Orders page!",courierDeliveryPage.getPageTitle().equals("My Orders"));
-        Assert.assertTrue(courierDeliveryPage.confirmRequest());
+        Assert.assertTrue(courierDeliveryPage.confirmRequest(dataTable));
     }
 }
