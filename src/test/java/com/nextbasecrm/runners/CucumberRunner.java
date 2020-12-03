@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/nextbasecrm/step_definitions",
         dryRun = false,
-        tags="",
+        //tags="@courier_delivery",
         publish = true
 )
 public class CucumberRunner {

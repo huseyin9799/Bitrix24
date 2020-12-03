@@ -4,7 +4,7 @@ Feature: As help desk, user should be able to submit courier delivery form
     Given user is on the login page
     When user logs in as "help desk"
 
-  @courier_delivery
+  @courier_delivery @regression
   Scenario: Submit a courier delivery form with valid data
     Given user is on the courier delivery form
     When user enters valid data in each field
