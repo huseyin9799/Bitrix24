@@ -3,7 +3,7 @@ Feature: As a user I want to be able to create Task
     Given user is on the login page
     When user logs in as "help desk"
 
-  @Task
+  @Task @regression
   Scenario: As a user I want to be able to create a simple task
     Given user is on task module
     When user provides task title's name and task's description

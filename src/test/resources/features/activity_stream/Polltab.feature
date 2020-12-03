@@ -4,7 +4,7 @@ Feature: As a user I want to be able to create an poll under poll module
     Given user is on the login page
     When user logs in as "help desk"
 
-  @poll
+  @poll @regression
   Scenario Outline: As a user I want to be able to create a simple poll
     Given user is on poll module
     When user enter message into message box "<Message>"
